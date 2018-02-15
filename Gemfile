@@ -26,7 +26,7 @@ gem 'kss'
 gem 'link_header'
 gem 'mail'
 gem 'mailjet'
-gem 'mas-assets', git: 'git@github.com:moneyadviceservice/mas-assets'
+gem 'mas-assets', git: 'https://github.com/moneyadviceservice/mas-assets'
 gem 'meta-tags', '~> 2.4'
 gem 'mysql2', '0.4.9'
 gem 'newrelic_rpm'
@@ -61,13 +61,15 @@ gem 'decision_trees', '~> 2.1.0'
 gem 'feedback', '~> 0.4.0'
 gem 'mortgage_calculator', '~> 2.4.1'
 gem 'payday_loans_intervention', '~> 1.7.0'
-gem 'pensions_calculator', '~> 1.4.3'
+gem 'pensions_calculator', '~> 1.4.3', git: 'https://github.com/moneyadviceservice/pensions_calculator', branch: 'add-to-jenkins'
 gem 'quiz', '~> 1.2.0', source: 'http://gems.dev.mas.local'
 gem 'rio', '1.18.4', source: 'http://gems.dev.mas.local'
 gem 'savings_calculator', '~> 1.8.1'
 gem 'timelines', '~> 1.5.0'
 gem 'universal_credit', '3.1.0'
 gem 'wpcc', '1.14.0'
+gem 'mas-fonts'
+gem 'rake', '~> 11.0'
 
 # 1.0.2 has breaking changes as it adds japanese and turkish locales
 gem 'validate_url', '1.0.0'
@@ -87,9 +89,11 @@ group :development do
 end
 
 group :test do
+  gem 'brakeman'
   gem 'capybara'
   gem 'chronic'
   gem 'codeclimate-test-reporter', '0.6.0', require: false
+  gem 'cucumber', '2.4.0'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'email_spec', '< 2' # DelayedJob integration removed in 2.0.0
@@ -127,6 +131,7 @@ group :test, :development do
   gem 'rack-livereload'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'tzinfo-data'
 end
 
 group :doc do

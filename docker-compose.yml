@@ -1,0 +1,28 @@
+version: '2.1'
+services:
+  database:
+    image: mtirsel/mysql-5.1
+    environment:
+      - MYSQL_DATABASE=frontend_test
+      - MYSQL_ROOT_PASSWORD=mas
+      - MYSQL_USER=mas
+      - MYSQL_PASSWORD=mas
+    volumes:
+      - database:/var/lib/mysql/data
+    restart: always
+  rails:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GITHUB_USER=$GITHUB_TOKEN_USR
+      - GITHUB_PASS=$GITHUB_TOKEN_PSW
+    env_file:
+      - ${ENV_VARS}
+    depends_on:
+      - database
+    links:
+      - database
+volumes:
+  bundle: {}
+  database: {}
