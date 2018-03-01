@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/moneyadviceservice/pensions_calculator
-  revision: 4c1bc17e3484ebca9b7f8c802dbcc4863132ad5c
+  revision: 824547894f92e2a0442cb21ec404c54fa2ab643f
   branch: add-to-jenkins
   specs:
-    pensions_calculator (1.4.3)
+    pensions_calculator (1.4.4)
       autoprefixer-rails
       dough-ruby (~> 5.0)
       meta-tags
@@ -106,7 +106,7 @@ GEM
     angularjs-rails (1.2.26)
     arel (6.0.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.7.2)
+    autoprefixer-rails (8.0.0)
       execjs
     baby_cost_calculator (0.3.0)
       rails (>= 4, < 5)
@@ -180,6 +180,7 @@ GEM
       rails (>= 4, < 5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    crass (1.0.3)
     cream (1.0.0)
       faraday (>= 0.9)
       faraday_middleware
@@ -291,7 +292,7 @@ GEM
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
       railties (>= 4.0, < 5.1)
-    dough-ruby (5.26.3.303)
+    dough-ruby (5.26.3.304)
       activemodel
       activesupport
       rails (>= 3.2, < 5)
@@ -341,7 +342,7 @@ GEM
       geokit (~> 1.5)
       rails (>= 3.0)
     gherkin (4.1.1)
-    globalid (0.4.0)
+    globalid (0.4.1)
       activesupport (>= 4.2.0)
     google-analytics-rails (1.1.1)
     haml (5.0.0)
@@ -371,7 +372,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (0.9.3)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     i18n-js (3.0.0.mas)
       i18n
@@ -404,10 +405,11 @@ GEM
     letter_opener (1.4.1)
       launchy (~> 2.2)
     link_header (0.0.8)
-    loofah (2.0.3)
+    loofah (2.2.0)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.6.6)
-      mime-types (>= 1.16, < 4)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
     mailjet (1.4.12)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -434,11 +436,12 @@ GEM
       nokogiri (~> 1.6)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    meta-tags (2.4.0)
-      actionpack (>= 3.2.0, <= 5.1.0)
+    meta-tags (2.8.0)
+      actionpack (>= 3.2.0, < 5.3)
     method_source (0.8.2)
     mime-types (2.99.3)
-    mini_portile2 (2.2.0)
+    mini_mime (1.0.0)
+    mini_portile2 (2.3.0)
     minitest (5.11.3)
     modernizr-rails (2.6.3)
     mortgage_calculator (2.4.1.704)
@@ -450,7 +453,7 @@ GEM
       rails (>= 4, < 5)
       sass-rails
       underscore-rails
-    multi_json (1.12.2)
+    multi_json (1.13.1)
     multi_test (0.1.2)
     multipart-post (2.0.0)
     mysql2 (0.4.9)
@@ -458,8 +461,8 @@ GEM
     net-http-persistent (2.9.4)
     netrc (0.11.0)
     newrelic_rpm (4.1.0.333)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
     nunes (0.5.0)
     opening_hours (0.0.7)
@@ -505,7 +508,7 @@ GEM
       friendly_id (>= 5.0)
       jquery-rails
       rails (>= 4, < 5)
-    rack (1.6.8)
+    rack (1.6.9)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-livereload (0.3.16)
@@ -525,8 +528,8 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.8)
-      activesupport (>= 4.2.0.beta, < 5.0)
+    rails-dom-testing (1.0.9)
+      activesupport (>= 4.2.0, < 5.0)
       nokogiri (~> 1.6)
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
@@ -677,11 +680,11 @@ GEM
       rack (>= 1.3, < 3)
       rack-accept (~> 0.4)
       tilt (>= 1.4, < 3)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.3)
       tzinfo (>= 1.0.0)
-    uglifier (3.2.0)
+    uglifier (4.1.6)
       execjs (>= 0.3.0, < 3)
     underscore-rails (1.8.3)
     unf (0.1.4)
@@ -795,7 +798,7 @@ DEPENDENCIES
   nunes
   opening_hours
   payday_loans_intervention (~> 1.7.0)
-  pensions_calculator (~> 1.4.3)!
+  pensions_calculator (~> 1.4.4)!
   poltergeist
   postcode_anywhere-email_validation
   pry-rails
