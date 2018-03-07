@@ -122,7 +122,7 @@ Mas::Cms::Client.config do |c|
   c.timeout      =  (ENV['FRONTEND_HTTP_REQUEST_TIMEOUT'] ||= '10').to_i
   c.open_timeout =  (ENV['FRONTEND_HTTP_REQUEST_TIMEOUT'] ||= '10').to_i
   c.api_token    =  (ENV['MAS_CMS_API_TOKEN'] ||= 'mytoken')
-  c.host         =  (ENV['MAS_CMS_URL'] ||= 'http://localhost:3000')
+  c.host         =  (ENV['MAS_CMS_URL'] ||= 'https://cms.preview.dev.mas.local')
   c.retries      = 1
   c.cache        = Rails.cache
   c.cache_gets   = true
